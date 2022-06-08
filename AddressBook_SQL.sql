@@ -30,7 +30,7 @@ UPDATE PersonContact set State='Andhra Pradesh' where FirstName='Lavanya' or Fir
 UPDATE PersonContact set ZipCode='125643' where FirstName='Mahesh' or FirstName='Vivek'
 
  
-/*UC5 Ability to delete a person using person's name*/
+/* UC5 Delete a person Contacts using Name*/
 Delete from PersonContact where FirstName = 'Priya';
 
 
