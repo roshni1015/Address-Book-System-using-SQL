@@ -24,3 +24,9 @@ Insert into PersonContact(FirstName,LastName,Address,City,State,ZipCode,PhoneNum
 ('Priya','Kulkarni','H.T.Colony','Kolkata','West Bangal','908745','7775137805','priya@mail.com');
 
 select * from PersonContact;
+
+/* UC4 Edit State and PinCode using name */
+UPDATE PersonContact set State='Andhra Pradesh' where FirstName='Lavanya' or FirstName='Priya'
+UPDATE PersonContact set ZipCode='125643' where FirstName='Mahesh' or FirstName='Vivek'
+
+
