@@ -30,11 +30,18 @@ UPDATE PersonContact set State='Andhra Pradesh' where FirstName='Lavanya' or Fir
 UPDATE PersonContact set ZipCode='125643' where FirstName='Mahesh' or FirstName='Vivek'
 
  
-/*UC5 Ability to delete a person using person's name*/
+/*UC5 Delete a person using Name*/
 Delete from PersonContact where FirstName = 'Priya';
 
 
-/* UC6 Ability to Retrieve Person belonging to a City or State from the Address Book */
+/* UC6 Retrieve Person Contacts By City or State */
 select * from PersonContact where City = 'Pune' or State = 'Maharastra';
 select * from PersonContact where City = 'Mumbai' 
 select * from PersonContact where State = 'Tamil Nadu' 
+
+
+/* Size of Address Book by City and State*/ 
+Select count(City) from PersonContact;
+Select COUNT(Address) From PersonContact Where City='Pune' 
+Select count(State) from PersonContact;
+Select COUNT(Address) From PersonContact Where State='Maharastra' 
