@@ -40,7 +40,7 @@ select * from PersonContact where City = 'Mumbai'
 select * from PersonContact where State = 'Tamil Nadu' 
 
 
-/* Size of Address Book by City and State*/ 
+/* UC7 Size of Address Book by City and State*/ 
 Select count(City) from PersonContact;
 Select COUNT(Address) From PersonContact Where City='Pune' 
 Select count(State) from PersonContact;
