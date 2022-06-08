@@ -29,4 +29,8 @@ select * from PersonContact;
 UPDATE PersonContact set State='Andhra Pradesh' where FirstName='Lavanya' or FirstName='Priya'
 UPDATE PersonContact set ZipCode='125643' where FirstName='Mahesh' or FirstName='Vivek'
 
+ 
+/*UC5 Ability to delete a person using person's name*/
+Delete from PersonContact where FirstName = 'Priya';
+
 
