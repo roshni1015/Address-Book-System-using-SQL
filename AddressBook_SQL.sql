@@ -34,7 +34,7 @@ UPDATE PersonContact set ZipCode='125643' where FirstName='Mahesh' or FirstName=
 Delete from PersonContact where FirstName = 'Priya';
 
 
-/* UC6 Ability to Retrieve Person belonging to a City or State from the Address Book */
+/* UC6 Retrieve Person by City or State  */
 select * from PersonContact where City = 'Pune' or State = 'Maharastra';
 select * from PersonContact where City = 'Mumbai' 
 select * from PersonContact where State = 'Tamil Nadu' 
