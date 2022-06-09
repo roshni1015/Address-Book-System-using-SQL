@@ -54,8 +54,14 @@ ALTER TABLE PersonContact ADD Type varchar(15);
 UPDATE PersonContact set Type='Family' where FirstName='Roshni'
 UPDATE PersonContact set Type='Profession' where FirstName='Mahesh';
 UPDATE PersonContact set Type='Friend' where Firstname='Lavanya';
+UPDATE PersonContact set Type='Family' where Firstname='Vivek';
+
 
 Select * from PersonContact;
 
 /* UC10 Get Number Of Contact Persons By Type */
 Select COUNT(Type) From PersonContact
+
+/* Add Person to both Friend and Family */
+Insert into PersonContact Values ('Vaishanvi','Chavan','M.T.Colony','Solapur','Maharastra','123498','9934566747','vaishanvi@mail.com','Family')
+Insert into PersonContact Values ('Mangesh','Deshpande','N.T.Colony','Kolhapur','Maharastra','123456','9999876747','mangesh@mail.com','Friend')
