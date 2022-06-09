@@ -56,3 +56,6 @@ UPDATE PersonContact set Type='Profession' where FirstName='Mahesh';
 UPDATE PersonContact set Type='Friend' where Firstname='Lavanya';
 
 Select * from PersonContact;
+
+/* UC10 Get Number Of Contact Persons By Type */
+Select COUNT(Type) From PersonContact
