@@ -4,7 +4,7 @@ use AddressBookDB
 
 /* UC2 create a PersonContacts table in theAddress Book service database*/
 create table PersonContact(
-Id int identity(1,1) NOT NULL PRIMARY KEY,
+Id int identity(1,1),
 FirstName varchar(20) ,
 LastName varchar(20),
 Address varchar(200),
