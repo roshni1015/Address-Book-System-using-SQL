@@ -4,7 +4,7 @@ use AddressBookDB
 
 /* UC2 create a PersonContacts table in theAddress Book service database*/
 create table PersonContact(
-Id int identity(1,1) NOT NULL PRIMARY KEY,
+Id int identity(1,1),
 FirstName varchar(20) ,
 LastName varchar(20),
 Address varchar(200),
@@ -46,7 +46,7 @@ Select COUNT(Address) From PersonContact Where City='Pune'
 Select count(State) from PersonContact;
 Select COUNT(Address) From PersonContact Where State='Maharastra' 
 
-/* UC8 Retrieve Entries Sorted Alphabetically by Person’s name for a given city */
+/* UC8 Retrieve Entries Sorted Alphabetically by Personâ€™s name for a given city */
 Select* from PersonContact where city='Pune'order by FirstName Asc;
 
 /* UC9 Identify Each Address Book with Name and Type */
