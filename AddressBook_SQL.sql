@@ -54,6 +54,7 @@ ALTER TABLE PersonContact ADD Type varchar(15);
 UPDATE PersonContact set Type='Family' where FirstName='Roshni'
 UPDATE PersonContact set Type='Profession' where FirstName='Mahesh';
 UPDATE PersonContact set Type='Friend' where Firstname='Lavanya';
+UPDATE PersonContact set Type='Family' where Firstname='Vivek';
 
 Select * from PersonContact;
 
