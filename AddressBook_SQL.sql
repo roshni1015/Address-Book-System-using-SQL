@@ -46,7 +46,7 @@ Select COUNT(Address) From PersonContact Where City='Pune'
 Select count(State) from PersonContact;
 Select COUNT(Address) From PersonContact Where State='Maharastra' 
 
-/* UC8 Retrieve Entries Sorted Alphabetically by Person’s name for a given city */
+/* UC8 Retrieve Entries Sorted Alphabetically by Personâ€™s name for a given city */
 Select* from PersonContact where city='Pune'order by FirstName Asc;
 
 /* UC9 Identify Each Address Book with Name and Type */
@@ -62,6 +62,6 @@ Select * from PersonContact;
 /* UC10 Get Number Of Contact Persons By Type */
 Select COUNT(Type) From PersonContact
 
-/* Add Person to both Friend and Family */
+/* UC11 Add Person to both Friend and Family */
 Insert into PersonContact Values ('Vaishanvi','Chavan','M.T.Colony','Solapur','Maharastra','123498','9934566747','vaishanvi@mail.com','Family')
 Insert into PersonContact Values ('Mangesh','Deshpande','N.T.Colony','Kolhapur','Maharastra','123456','9999876747','mangesh@mail.com','Friend')
