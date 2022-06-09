@@ -23,7 +23,7 @@ Insert into PersonContact(FirstName,LastName,Address,City,State,ZipCode,PhoneNum
 ('Vivek','Patil','A.T.Colony','Chennai','Tamil Nadu','234517','9856112233','vivek@mail.com'),
 ('Priya','Kulkarni','H.T.Colony','Kolkata','West Bangal','908745','7775137805','priya@mail.com');
 
-select * from PersonContact;
+Select * from PersonContact;
 
 /* UC4 Edit State and PinCode using name */
 UPDATE PersonContact set State='Andhra Pradesh' where FirstName='Lavanya' or FirstName='Priya'
@@ -48,3 +48,11 @@ Select COUNT(Address) From PersonContact Where State='Maharastra'
 
 /* UC8 Retrieve Entries Sorted Alphabetically by Person’s name for a given city */
 Select* from PersonContact where city='Pune'order by FirstName Asc;
+
+/* UC9 Identify Each Address Book with Name and Type */
+ALTER TABLE PersonContact ADD Type varchar(15);
+UPDATE PersonContact set Type='Family' where FirstName='Roshni'
+UPDATE PersonContact set Type='Profession' where FirstName='Mahesh';
+UPDATE PersonContact set Type='Friend' where Firstname='Lavanya';
+
+Select * from PersonContact;
