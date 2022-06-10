@@ -1,4 +1,4 @@
-/*UC1 to create a Address Book service database*/
+/************************************UC1 to create a Address Book service database************************/
 create database AddressBookDB
 use AddressBookDB
 
@@ -62,6 +62,41 @@ Select * from PersonContact;
 /* UC10 Get Number Of Contact Persons By Type */
 Select COUNT(Type) From PersonContact
 
-/* Add Person to both Friend and Family */
+/* UC11 Add Person to both Friend and Family */
 Insert into PersonContact Values ('Vaishanvi','Chavan','M.T.Colony','Solapur','Maharastra','123498','9934566747','vaishanvi@mail.com','Family')
 Insert into PersonContact Values ('Mangesh','Deshpande','N.T.Colony','Kolhapur','Maharastra','123456','9999876747','mangesh@mail.com','Friend')
+
+
+/* UC12 ER Diagram for Address Book Service DB */
+Create table AddressBook(AddressBookId Int Identity(1,1) Primary Key, AddressBookName varchar(50));
+Select * from AddressBook;
+
+Create table PersonContacts( PersonId Int Identity(1,1) Primary Key,
+							 AddressBookId Int Foreign Key References AddressBook(AddressBookId),
+							 FirstName varchar(20),
+							 LastName varchar(20),
+							 Address varchar(200),
+							 City varchar(20),
+							 State varchar(20),
+							 ZipCode varchar(10),
+							 PhoneNumber varchar(20),
+							 EmailId varchar(100));
+
+Select * from PersonContacts;
+
+
+Create table Types(TypeId Int Identity(1,1) Primary Key, Type varchar(20));
+Select * from Types;
+
+
+Create table PersonsDetailType(PersonId Int Foreign Key References PersonContacts(PersonId),
+                               TypeId Int Foreign Key References Types(TypeId));
+
+Select * from PersonsDetailType;
+
+
+Create table Professional(PersonId Int Foreign Key References PersonContacts(PersonId),
+						  Professional_PersonId Int,
+						  ProfessionID int);
+
+Select * from Professional;
